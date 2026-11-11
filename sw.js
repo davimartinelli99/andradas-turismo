@@ -1,6 +1,6 @@
 // Service worker: guarda os arquivos do app para abrir mais rápido e funcionar offline.
 // Ao mudar algum arquivo, aumente a versão abaixo para os celulares baixarem a nova versão.
-const VERSAO = "andradas-v2";
+const VERSAO = "andradas-v3";
 const ARQUIVOS = ["./", "index.html", "css/style.css", "js/data.js", "js/eventos.js", "js/store.js", "js/app.js", "img/icon.svg", "manifest.json"];
 
 self.addEventListener("install", e => e.waitUntil(caches.open(VERSAO).then(c => c.addAll(ARQUIVOS)).then(() => self.skipWaiting())));
